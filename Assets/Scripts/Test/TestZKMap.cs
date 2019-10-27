@@ -54,6 +54,11 @@ public class TestZKMap : MonoBehaviour
             Optimize();
             CreateMap();
         }
+
+        if (GUILayout.Button("GetJson"))
+        {
+            MapInfoManager.Instance.SaveMapInfoByByte(Application.dataPath, "testData.bin");
+        }
     }
 
     private void Optimize()

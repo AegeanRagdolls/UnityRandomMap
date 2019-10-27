@@ -51,7 +51,6 @@ namespace ZK.Tool.Map
         All,
     }
 
-
     [CreateAssetMenu(fileName = "MapAssetInfo", menuName = "Config/Map/MapAssetInfo")]
     public class MapAssetInfo : ScriptableObject
     {
@@ -93,6 +92,10 @@ namespace ZK.Tool.Map
         /// </summary>
         public MapAssetAllowRefreshPosition mapAssetAllowRefreshPosition;
 
+        /// <summary>
+        /// 是否会变成障碍物
+        /// </summary>
+        public bool isBecomeObstacles = false;
 
     }
 
@@ -124,9 +127,11 @@ namespace ZK.Tool.Map
         public BarrierType type = BarrierType.Water;
     }
 
+
+
     public class MapConfig
     {
-        public int id;
+        public ushort assetId;
 
         public string tag;
 
@@ -143,6 +148,9 @@ namespace ZK.Tool.Map
         [Range(1, 100)]
         public int refreshRate = 100;
     }
+
+
+
 
 }
 

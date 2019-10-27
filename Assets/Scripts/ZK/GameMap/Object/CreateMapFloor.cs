@@ -33,7 +33,7 @@ namespace ZK.Tool.Map
                                 var tmp = Random.Range(1, 101);
                                 if (tmp < e.refreshRate)
                                 {
-                                    RandomMapHelper.CreateMapQuickly(item.mapAsset, new Vector3(x, 0, y));
+                                    RandomMapHelper.CreateMapQuickly(item, new Vector3(x, 0, y));
                                     tmpMap[x, y] = false;
                                 }
                             }
@@ -53,7 +53,7 @@ namespace ZK.Tool.Map
                         {
                             if (tmpMap[x, y])
                             {
-                                RandomMapHelper.CreateMapQuickly(item.mapAsset, new Vector3(x, 0, y));
+                                RandomMapHelper.CreateMapQuickly(item, new Vector3(x, 0, y));
                             }
                         }
                     }

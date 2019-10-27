@@ -17,13 +17,13 @@ namespace ZK.Tool.Map
                 switch (item.mapAssetAllowRefreshPosition)
                 {
                     case MapAssetAllowRefreshPosition.Mountain:
-                        RandomAsset(item, typeList[0]);
+                        RandomAsset(item, typeList[0], map);
                         break;
                     case MapAssetAllowRefreshPosition.Water:
-                        RandomAsset(item, typeList[1]);
+                        RandomAsset(item, typeList[1], map);
                         break;
                     case MapAssetAllowRefreshPosition.Road:
-                        RandomAsset(item, typeList[2]);
+                        RandomAsset(item, typeList[2], map);
                         break;
                     case MapAssetAllowRefreshPosition.All:
                         break;
@@ -64,7 +64,7 @@ namespace ZK.Tool.Map
         }
 
 
-        private void RandomAsset(MapAssetConfig config, List<Vector2Int> map)
+        private void RandomAsset(MapAssetConfig config, List<Vector2Int> map, int[,] baseMap)
         {
             int loopNumber = 0;
             bool isOK = true;
@@ -95,7 +95,8 @@ namespace ZK.Tool.Map
                     }
                     if (isCreate)
                     {
-                        var obj = RandomMapHelper.CreateMapQuickly(config.mapAsset, new Vector3(mapPoint.x, 1, mapPoint.y));
+                        var h = RandomMapHelper.AnalysisAssetHighly(baseMap[mapPoint.x, mapPoint.y]);
+                        var obj = RandomMapHelper.CreateMapQuickly(config, new Vector3(mapPoint.x, h, mapPoint.y));
                         objs.Add(obj);
                         this.tmpMap[mapPoint.x, mapPoint.y] = true;
                         quantity--;
@@ -110,6 +111,7 @@ namespace ZK.Tool.Map
             }
 
         }
+
 
 
     }

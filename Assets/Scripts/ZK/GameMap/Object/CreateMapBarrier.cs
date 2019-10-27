@@ -36,7 +36,7 @@ namespace ZK.Tool.Map
                         var h = Mathf.Abs(tmp) / 1000;
                         for (int i = 0; i < h; i++)
                         {
-                            RandomMapHelper.CreateMapQuickly(config.mapAsset, new UnityEngine.Vector3(x, i, y));
+                            RandomMapHelper.CreateMapQuickly(config, new UnityEngine.Vector3(x, i, y));
                         }
                     }
                 }
@@ -57,7 +57,7 @@ namespace ZK.Tool.Map
                     if (tmp <= -1000)
                     {
                         var h = Mathf.Abs(tmp) / 1000;
-                        RandomMapHelper.CreateMapQuickly(config.mapAsset, new UnityEngine.Vector3(x, h, y));
+                        RandomMapHelper.CreateMapQuickly(config, new UnityEngine.Vector3(x, h, y));
                     }
                 }
             }
@@ -76,7 +76,7 @@ namespace ZK.Tool.Map
                     var tmp = map[x, y];
                     if (tmp < 0 && tmp > -1000)
                     {
-                        RandomMapHelper.CreateMapQuickly(config.mapAsset, new UnityEngine.Vector3(x, 0, y));
+                        RandomMapHelper.CreateMapQuickly(config, new UnityEngine.Vector3(x, 0, y));
                     }
                 }
             }

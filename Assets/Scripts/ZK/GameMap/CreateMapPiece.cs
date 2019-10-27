@@ -16,6 +16,7 @@ namespace ZK.Tool.Map
 
         public void CreateMap(MapAssetInfo mapAssetInfo, bool[,] map)
         {
+            MapInfoManager.Instance.ClearTmpList();
             RandomMapHelper.ClearTmpObjectBuffer();
             this.DisposeTestObject();
 
@@ -41,11 +42,8 @@ namespace ZK.Tool.Map
 
             CreateMapAsset cma = new CreateMapAsset();
             cma.Create(mapAssetInfo.mapAssetConfigs, this.newMap);
-            //this.CreateFloor(mapAssetInfo, map, floor);
-            //this.CreateBarriers(mapAssetInfo, map, barriers);
-            //this.CreateAssets(mapAssetInfo, map, floor, barriers);
 
-       
+            MapInfoManager.Instance.SetMapInfo(map);
         }
 
 

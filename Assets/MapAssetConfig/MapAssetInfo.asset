@@ -85,6 +85,7 @@ MonoBehaviour:
     generateNumber: 10
     minDistance: 3
     mapAssetAllowRefreshPosition: 2
+    isBecomeObstacles: 0
   - id: 0
     tag: 
     mapAsset: {fileID: 1969907981192740, guid: f488ee03453f85e4b97b2e7de91a8118, type: 3}
@@ -92,13 +93,15 @@ MonoBehaviour:
     generateNumber: 18
     minDistance: 8
     mapAssetAllowRefreshPosition: 2
+    isBecomeObstacles: 0
   - id: 0
     tag: 
     mapAsset: {fileID: 1199541225833924, guid: 603eb0fbe6e058846834b042ad63eeda, type: 3}
     depthInfos: []
-    generateNumber: 0
-    minDistance: 0
+    generateNumber: 10
+    minDistance: 3
     mapAssetAllowRefreshPosition: 0
+    isBecomeObstacles: 0
   - id: 0
     tag: 
     mapAsset: {fileID: 1451894172722464, guid: 4ff6b05e43ace70448dd9b851f47e97b, type: 3}
@@ -106,6 +109,7 @@ MonoBehaviour:
     generateNumber: 3
     minDistance: 4
     mapAssetAllowRefreshPosition: 2
+    isBecomeObstacles: 0
   - id: 0
     tag: 
     mapAsset: {fileID: 1742575148270536, guid: bbaf1fa39daee644caddb7a9c5503ac1, type: 3}
@@ -113,6 +117,7 @@ MonoBehaviour:
     generateNumber: 5
     minDistance: 9
     mapAssetAllowRefreshPosition: 2
+    isBecomeObstacles: 0
   - id: 0
     tag: 
     mapAsset: {fileID: 1612204078448140, guid: 45fa6973d14d3554192082b350ad1571, type: 3}
@@ -120,6 +125,7 @@ MonoBehaviour:
     generateNumber: 18
     minDistance: 2
     mapAssetAllowRefreshPosition: 2
+    isBecomeObstacles: 0
   - id: 0
     tag: 
     mapAsset: {fileID: 1402364034506678, guid: 06716651652c8a649b1e8b810eecfdad, type: 3}
@@ -127,6 +133,7 @@ MonoBehaviour:
     generateNumber: 20
     minDistance: 1
     mapAssetAllowRefreshPosition: 2
+    isBecomeObstacles: 0
   - id: 0
     tag: 
     mapAsset: {fileID: 1317306537682800, guid: 72456bba7d08f304ba7b5bfa671206ad, type: 3}
@@ -134,3 +141,4 @@ MonoBehaviour:
     generateNumber: 19
     minDistance: 1
     mapAssetAllowRefreshPosition: 2
+    isBecomeObstacles: 0
